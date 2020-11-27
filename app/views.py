@@ -72,3 +72,5 @@ def search(movie_name):
     searched_movies = search_movie(movie_name_format)
     title = f'search results for {movie_name}'
     return render_template('search.html',movies = searched_movies)    
+
+    

@@ -6,6 +6,7 @@ from .models import movie
 Movie = movie.Movie
 # Getting api key
 api_key = app.config['MOVIE_API_KEY']
+
 # Getting the movie base url
 base_url = app.config["MOVIE_API_BASE_URL"]
 
@@ -76,7 +77,7 @@ def get_movie(id):
 
     return movie_object
 
-    
+
 def search_movie(movie_name):
     search_movie_url = 'https://api.themoviedb.org/3/search/movie?api_key={}&query={}'.format(api_key,movie_name)
     with urllib.request.urlopen(search_movie_url) as url:
